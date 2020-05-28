@@ -1,7 +1,10 @@
+## Dzien 1
+
 Wszystko co było dzisiaj (26.05.2020r.) znajdziecie tutaj https://github.com/artusiep/codebrainers-fs-03-2020
 
 Przeróbcie sobie zadania *9*, *10*, *11* ze strony: https://www.w3resource.com/python-exercises/class-exercises/ 
 Są tam gotowe rozwiązania ale postarajcie się sami do tego podejść i sprawdzić w miare możliwości.
+
 Bullet pointy po dzisiaj:
 * keyword class
 * keyword self
