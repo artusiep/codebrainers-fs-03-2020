@@ -7,7 +7,7 @@ Są tam gotowe rozwiązania ale postarajcie się sami do tego podejść i sprawd
 
 Bullet pointy po dzisiaj:
 * keyword class
-* keyword self
+* keyword cls
 * metoda vs funkcja
 * class vs object (jak się przynajmniej Ci wydaje)
 * dostęp do metod obiektu (jaki operator służy do wywołania metody na obiekcie)

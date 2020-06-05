@@ -18,11 +18,6 @@ class CsvReader:
         return self._path
 
 
-csv_reader = CsvReader('data/data.csv')
-print(csv_reader.get_path())
-print(csv_reader.get_sheet())
-
-
 class SheetCalculator:
     #  __init__ pobranie CsvReadera i wczytanie sheeta do własnego pola
     # get_column
@@ -62,26 +57,30 @@ class SheetCalculator:
         # print(type(col_number), type(function))
         return reduce(function, self.get_column(col_number))
 
+if __name__ == "__main__":
+    csv_reader = CsvReader('data/data.csv')
+    print(csv_reader.get_path())
+    print(csv_reader.get_sheet())
+    sheetcalc = SheetCalculator(csv_reader)
+    print(sheetcalc.get_row(4))
+    print(sheetcalc.count_column())
+    print(sheetcalc.get_column(6))
+    print(sheetcalc.count_row())
+    print(sheetcalc.sum_col(0))
+    print(sheetcalc.mul_sum(0))
+    print(sheetcalc.mean_column(0))
+    print(sheetcalc.apply_function_on_column(6, lambda x, y: int(x) + int(y)))
+    print(sheetcalc.apply_function_on_column(6, lambda x, y: int(y)))
 
-sheetcalc = SheetCalculator(csv_reader)
-print(sheetcalc.get_row(4))
-print(sheetcalc.count_column())
-print(sheetcalc.get_column(6))
-print(sheetcalc.count_row())
-print(sheetcalc.sum_col(0))
-print(sheetcalc.mul_sum(0))
-print(sheetcalc.mean_column(0))
-print(sheetcalc.apply_function_on_column(6, lambda x, y: int(x) + int(y)))
-print(sheetcalc.apply_function_on_column(6, lambda x, y: int(y)))
+
+    def max(x, y):
+        # print(type(x), type(x))
+        if int(x) > int(y):
+            return x
+        else:
+            return y
 
 
-def max(x, y):
-    # print(type(x), type(x))
-    if int(x) > int(y):
-        return x
-    else:
-        return y
+    print(type(max))
 
-print(type(max))
-
-print(sheetcalc.apply_function_on_column(0, max))
+    print(sheetcalc.apply_function_on_column(0, max))
